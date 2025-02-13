@@ -1,8 +1,8 @@
-NAME =
+NAME = account
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 HEADER = Account.hpp
-SRC =
+SRC = tests.cpp Account.cpp
 
 OBJS := $(SRC:.cpp=.o)
 
