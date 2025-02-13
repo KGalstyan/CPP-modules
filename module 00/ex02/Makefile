@@ -1,9 +1,8 @@
-NAME = phonebook
+NAME =
 CPP = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
-
-HEADER = Contact.hpp PhoneBook.hpp
-SRC = PhoneBook.cpp Contact.cpp main.cpp
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
+HEADER = Account.hpp
+SRC =
 
 OBJS := $(SRC:.cpp=.o)
 

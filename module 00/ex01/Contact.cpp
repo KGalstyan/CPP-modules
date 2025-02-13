@@ -23,6 +23,11 @@ std::string Contact::get_nick_name()
 	return(this->nick_name);
 }
 
+std::string Contact::get_phone_number()
+{
+	return(this->phone_number);
+}
+
 std::string Contact::get_darkest_secret()
 {
 	return(this->darkest_secret);
@@ -40,6 +45,11 @@ void Contact::set_nick_name(const std::string &n_name)
 {
 	this->nick_name = n_name;
 }
+void Contact::set_phone_number(const std::string &p_number)
+{
+	this->phone_number = p_number;
+}
+
 void Contact::set_darkest_secret(const std::string &d_secret)
 {
 	this->darkest_secret = d_secret;
