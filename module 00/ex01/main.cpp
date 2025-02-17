@@ -84,7 +84,7 @@ int main()
             break;
         }
 		else
-            std::cout << RED "Invalid command. Please try again." RESET << std::endl;
+            std::cout << RED "Invalid command. Please try again." RESET << std::endl << "Please enter command: " << YELLOW "ADD | SEARCH | EXIT " RESET << std::endl;
     }
     return 0;
 }

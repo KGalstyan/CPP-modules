@@ -63,11 +63,13 @@ void PhoneBook::search_contact(Contact *contacts, int index, int con_num)
 	std::string f_name = contacts[index].get_first_name();
 	std::string l_name = contacts[index].get_last_name();
 	std::string n_name = contacts[index].get_nick_name();
-	std::cout << index << " | ";
-	std::cout << f_name << " | ";
-	std::cout << l_name << " | ";
-	std::cout << n_name << std::endl;
-
+	std::string p_number = contacts[index].get_phone_number();
+	std::string d_s = contacts[index].get_darkest_secret();
+	std::cout << "index: " << index << std::endl;
+	std::cout << "first name: " << f_name << std::endl;
+	std::cout << "last name: "<< l_name << std::endl;
+	std::cout << "phone number: " << p_number << std::endl;
+	std::cout << "darkest secreet: "<< d_s << std::endl;
 }
 
 void PhoneBook::print_all_contacts(Contact *contacts, int con_num)
