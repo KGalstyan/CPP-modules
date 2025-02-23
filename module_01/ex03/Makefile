@@ -1,8 +1,8 @@
-NAME = 
+NAME = ./violence
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
-HEADER = Account.hpp
-SRC = tests.cpp Account.cpp
+HEADER = HumanB.hpp HumanA.hpp
+SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJS := $(SRC:.cpp=.o)
 

@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 #include <cstring>
-#include "Contact.hpp"
 
 #define BLACK   "\033[30m"
 #define RED     "\033[31m"
@@ -20,15 +19,15 @@
 class Zombie
 {
 	public:
-		Zombie(std::string &name);
+		Zombie();
 		~Zombie();
 		void announce( void );
-		Zombie* newZombie( std::string &name );
-		void randomChump( std::string &name );
-		void set_name(std::string &name);
-		
+		void set_name(const std::string &name);
+		std::string get_name(void);
 	private:
 		std::string name;
-}
+};
+
+Zombie* zombieHorde( int N, std::string name );
 
 #endif
