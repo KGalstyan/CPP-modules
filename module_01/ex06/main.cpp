@@ -21,22 +21,18 @@ int main(int argc, char **argv)
 		case(1):{
 			std::cout << "[ DEBUG ]" << std::endl;
 			com.complain("DEBUG");
-			break;
 		}
 		case(2):{
 			std::cout << "[ INFO ]" << std::endl;
 			com.complain("INFO");
-			break;
 		}
 		case(3):{
 			std::cout << "[ WARNING ]" << std::endl;
 			com.complain("WARNING");
-			break;
 		}
 		case(4):{
 			std::cout << "[ ERROR ]" << std::endl;
 			com.complain("ERROR");
-			break;
 		}
 		default:
             std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
