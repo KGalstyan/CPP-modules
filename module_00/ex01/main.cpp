@@ -30,11 +30,6 @@ int main()
     while (true)
 	{
         my_getter(command);
-		if (!std::cin)
-		{
-            std::cout << MAGENTA "\nEOF reached or input error occurred. Exiting program." RESET << std::endl;
-            break;
-		}
         if (command == "ADD")
 		{
             if (my_note.index >= 8)

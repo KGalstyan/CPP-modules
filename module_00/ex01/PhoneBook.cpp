@@ -68,6 +68,7 @@ void PhoneBook::search_contact(Contact *contacts, int index, int con_num)
 	std::cout << "index: " << index << std::endl;
 	std::cout << "first name: " << f_name << std::endl;
 	std::cout << "last name: "<< l_name << std::endl;
+	std::cout << "nick name: "<< n_name << std::endl;
 	std::cout << "phone number: " << p_number << std::endl;
 	std::cout << "darkest secreet: "<< d_s << std::endl;
 }
@@ -85,10 +86,10 @@ void PhoneBook::print_all_contacts(Contact *contacts, int con_num)
 			l_name = l_name.substr(0, 9) + ".";
 		if(n_name.length() > 10)
 			n_name = n_name.substr(0, 9) + ".";
-		std::cout << i << " | ";
-		std::cout << f_name << " | ";
-		std::cout << l_name << " | ";
-		std::cout << n_name << std::endl;
+		std::cout << std::right << std::setw(10) << i << " | ";
+		std::cout << std::right << std::setw(10) << f_name << " | ";
+		std::cout << std::right << std::setw(10) << l_name << " | ";
+		std::cout << std::right << std::setw(10) << n_name << std::endl;
 	}
 }
 

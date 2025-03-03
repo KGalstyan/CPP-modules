@@ -1,8 +1,8 @@
-NAME = ./violence
+NAME = ./Fixedop
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
-HEADER = HumanB.hpp HumanA.hpp
-SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+HEADER = Fixed.hpp
+SRC = main.cpp Fixed.cpp
 
 OBJS := $(SRC:.cpp=.o)
 

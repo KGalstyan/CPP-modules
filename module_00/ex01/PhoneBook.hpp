@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+#include <iomanip>
 #include "Contact.hpp"
 
 #define BLACK   "\033[30m"
@@ -31,7 +32,7 @@ class PhoneBook
 		int index;
 		int number_of_contacts;
 	private:
-		Contact cont[7];
+		Contact cont[8];
 };
 
 #endif

@@ -1,8 +1,8 @@
-NAME = ./violence
+NAME = ./bsp
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
-HEADER = HumanB.hpp HumanA.hpp
-SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+HEADER = Fixed.hpp Point.hpp
+SRC = main.cpp Fixed.cpp bsp.cpp Point.cpp
 
 OBJS := $(SRC:.cpp=.o)
 

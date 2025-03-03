@@ -20,6 +20,11 @@ const std::string HumanB::get_name()
 
 void HumanB::attack()
 {
+	if(!this->weap)
+	{
+		std::cout << get_name()  << " doesn't have weapon !" << std::endl;
+		return ;
+	}
 	std::cout << get_name() << " attacks with their " << weap->getType() << std::endl;
 }
 
