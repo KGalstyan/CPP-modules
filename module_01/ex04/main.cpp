@@ -27,8 +27,8 @@ int main(int argc, char **argv)
 			line.erase(len, s1.length());
         	line.insert(len, s2);
         	len = line.find(s1, len + s2.length());
-			out_file << line;
 		}
+		out_file << line;
 		out_file << "\n";
 	}
 	return(0);

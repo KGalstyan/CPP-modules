@@ -11,7 +11,7 @@ int main()
 		std::cout << i+1 << " "
 		<< arr_zombie[i].get_name() << std::endl;
 	delete[] arr_zombie;
-	system("leaks hordeofzombie");
+	// system("leaks hordeofzombie");
 	return (0);
 }
 
