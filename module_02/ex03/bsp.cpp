@@ -18,11 +18,7 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
 	Fixed areaPAB = ft_module(count_area(point, a, b)) / 2;
 	Fixed areaPBC = ft_module(count_area(point, b, c)) / 2;
 	Fixed areaPCA = ft_module(count_area(point, c, a)) / 2;
-	std::cout << areaABC << std::endl;
-	std::cout << areaPAB << std::endl;
-	std::cout << areaPBC << std::endl;
-	std::cout << areaPCA << std::endl;
-	if(areaABC == (areaPAB + areaPBC + areaPCA))
+	if((areaABC == (areaPAB + areaPBC + areaPCA)) && (areaPAB != 0 && areaPBC != 0 && areaPCA != 0))
 		return(true);
 	return (false);
 }

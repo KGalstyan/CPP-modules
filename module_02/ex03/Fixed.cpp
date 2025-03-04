@@ -36,13 +36,13 @@ Fixed& Fixed::operator=(const Fixed &obj)
 	// std::cout << "Copy assignment operator called" << std::endl;
 	if (this == &obj)
 		return(*this);
-	this->fixed_point_number = obj.getRawBits();
+	this->fixed_point_number = obj.fixed_point_number;
 	return (*this);
 }
 
 bool Fixed::operator>(const Fixed &obj)
 {
-	if(this->getRawBits() > obj.getRawBits())
+	if(this->fixed_point_number > obj.fixed_point_number)
 		return(true);
 	else
 		return(false);
@@ -50,7 +50,7 @@ bool Fixed::operator>(const Fixed &obj)
 
 bool Fixed::operator<(const Fixed &obj)
 {
-	if(this->getRawBits() < obj.getRawBits())
+	if(this->fixed_point_number < obj.fixed_point_number)
 		return(true);
 	else
 		return(false);
@@ -58,7 +58,7 @@ bool Fixed::operator<(const Fixed &obj)
 
 bool Fixed::operator>=(const Fixed &obj)
 {
-	if(this->getRawBits() >= obj.getRawBits())
+	if(this->fixed_point_number >= obj.fixed_point_number)
 		return(true);
 	else
 		return(false);
@@ -66,7 +66,7 @@ bool Fixed::operator>=(const Fixed &obj)
 
 bool Fixed::operator<=(const Fixed &obj)
 {
-	if(this->getRawBits() <= obj.getRawBits())
+	if(this->fixed_point_number <= obj.fixed_point_number)
 		return(true);
 	else
 		return(false);
@@ -74,7 +74,7 @@ bool Fixed::operator<=(const Fixed &obj)
 
 bool Fixed::operator==(const Fixed &obj)
 {
-	if(this->getRawBits() == obj.getRawBits())
+	if(this->fixed_point_number == obj.fixed_point_number)
 		return(true);
 	else
 		return(false);
@@ -82,7 +82,7 @@ bool Fixed::operator==(const Fixed &obj)
 
 bool Fixed::operator!=(const Fixed &obj)
 {
-	if(this->getRawBits() != obj.getRawBits())
+	if(this->fixed_point_number != obj.fixed_point_number)
 		return(true);
 	else
 		return(false);
@@ -90,27 +90,27 @@ bool Fixed::operator!=(const Fixed &obj)
 
 Fixed Fixed::operator+(const Fixed &obj) const
 {
-	return Fixed((this->getRawBits() + obj.getRawBits()));
+	return Fixed((this->toFloat() + obj.toFloat()));
 }
 
 Fixed Fixed::operator-(const Fixed &obj) const
 {
-	return Fixed((this->getRawBits() - obj.getRawBits()));
+	return Fixed((this->toFloat() - obj.toFloat()));
 }
 
 Fixed Fixed::operator*(const Fixed &obj) const
 {
-	return Fixed((this->getRawBits() * obj.getRawBits()));
+	return Fixed((this->toFloat() * obj.toFloat()));
 }
 
 Fixed Fixed::operator/(const Fixed &obj) const
 {
-	if(obj.getRawBits() == 0)
+	if(obj.toFloat() == 0)
 	{
 		std::cout << "You cannot divide a number by zero" << std::endl;
-		return(obj);
+		std::exit(1);
 	}
-	return Fixed((this->getRawBits() / obj.getRawBits()));
+	return Fixed((this->toFloat() / obj.toFloat()));
 }
 
 Fixed& Fixed::operator++()

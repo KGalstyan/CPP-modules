@@ -1,10 +1,13 @@
+#ifndef POINT_HPP
+#define POINT_HPP
+
 #include "Fixed.hpp"
 
 class Point
 {
 	public:
 		Point();
-		Point(float x, float y);
+		Point(const float x, const float y);
 		Point(const Point &a);
 		Point& operator=(const Point &obj);
 		~Point();
@@ -18,4 +21,4 @@ class Point
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);
 
-
+#endif

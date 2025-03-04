@@ -1,3 +1,6 @@
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
+
 #include "Weapon.hpp"
 
 class HumanB
@@ -13,3 +16,5 @@ class HumanB
 		Weapon *weap;
 		std::string name;
 };
+
+#endif

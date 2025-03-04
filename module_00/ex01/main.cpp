@@ -6,7 +6,7 @@ void my_getter(std::string &dst)
 	if (!std::cin)
 	{
         std::cout << MAGENTA "EOF reached or input error occurred. Exiting program." RESET << std::endl;
-        exit(1);
+        std::exit(1);
 	}
 }
 

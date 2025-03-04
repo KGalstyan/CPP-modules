@@ -90,12 +90,12 @@ bool Fixed::operator!=(const Fixed &obj)
 
 Fixed Fixed::operator+(const Fixed &obj)
 {
-	return Fixed((this->fixed_point_number + obj.fixed_point_number));
+	return Fixed((this->toFloat() + obj.toFloat()));
 }
 
 Fixed Fixed::operator-(const Fixed &obj)
 {
-	return Fixed((this->fixed_point_number - obj.fixed_point_number));
+	return Fixed((this->toFloat() - obj.toFloat()));
 }
 
 Fixed Fixed::operator*(const Fixed &obj)
@@ -108,7 +108,7 @@ Fixed Fixed::operator/(const Fixed &obj)
 	if(obj.fixed_point_number == 0)
 	{
 		std::cout << "You cannot divide a number by zero" << std::endl;
-		return(obj);
+		std::exit(1);
 	}
 	return Fixed((this->toFloat() / obj.toFloat()));
 }
