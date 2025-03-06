@@ -1,0 +1,19 @@
+{
+	"files.associations": {
+		"__config": "cpp",
+		"algorithm": "cpp",
+		"cmath": "cpp",
+		"cstdio": "cpp",
+		"cstring": "cpp",
+		"cwchar": "cpp",
+		"ios": "cpp",
+		"iosfwd": "cpp",
+		"iostream": "cpp",
+		"istream": "cpp",
+		"iterator": "cpp",
+		"ostream": "cpp",
+		"streambuf": "cpp",
+		"string": "cpp",
+		"string_view": "cpp"
+	}
+}
