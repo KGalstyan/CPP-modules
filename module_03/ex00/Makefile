@@ -1,8 +1,8 @@
-NAME = ./Fixedop
+NAME = claptrap
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
-HEADER = Fixed.hpp
-SRC = main.cpp Fixed.cpp
+HEADER = ClapTrap.hpp
+SRC = main.cpp ClapTrap.cpp
 
 OBJS := $(SRC:.cpp=.o)
 

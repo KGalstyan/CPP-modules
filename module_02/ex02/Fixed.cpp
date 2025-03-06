@@ -88,22 +88,22 @@ bool Fixed::operator!=(const Fixed &obj)
 		return(false);
 }
 
-Fixed Fixed::operator+(const Fixed &obj)
+const Fixed Fixed::operator+(const Fixed &obj)
 {
 	return Fixed((this->toFloat() + obj.toFloat()));
 }
 
-Fixed Fixed::operator-(const Fixed &obj)
+const Fixed Fixed::operator-(const Fixed &obj)
 {
 	return Fixed((this->toFloat() - obj.toFloat()));
 }
 
-Fixed Fixed::operator*(const Fixed &obj)
+const Fixed Fixed::operator*(const Fixed &obj)
 {
 	return Fixed((this->toFloat() * obj.toFloat()));
 }
 
-Fixed Fixed::operator/(const Fixed &obj)
+const Fixed Fixed::operator/(const Fixed &obj)
 {
 	if(obj.fixed_point_number == 0)
 	{

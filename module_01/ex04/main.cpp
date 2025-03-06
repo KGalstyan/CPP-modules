@@ -19,9 +19,8 @@ int main(int argc, char **argv)
 	std::string line;
 	std::ofstream out_file(std::string(filename + ".replace"));
 	size_t len;
-	while(!input_file.eof())
+	while(std::getline(input_file, line))
 	{
-		std::getline(input_file, line);
 		len = line.find(s1);
 		while (len != std::string::npos) {
 			line.erase(len, s1.length());

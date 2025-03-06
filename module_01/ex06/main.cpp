@@ -7,15 +7,14 @@ int main(int argc, char **argv)
 		return(1);
 	}
 	Harl com;
-	int level = 0;
-	if(!strcmp(argv[1], "DEBUG"))
-		level = 1;
-	else if(!strcmp(argv[1], "INFO"))
-		level = 2;
-	else if(!strcmp(argv[1], "WARNING"))
-		level = 3;
-	else if(!strcmp(argv[1], "ERROR"))
-		level = 4;
+	int level = 1;
+	std::string var[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	for(int i = 0; i < 4 ; i++)
+	{
+		if(argv[1] == var[i])
+			break;
+		level++;
+	}
 	switch(level)
 	{
 		case(1):{
@@ -33,6 +32,7 @@ int main(int argc, char **argv)
 		case(4):{
 			std::cout << "[ ERROR ]" << std::endl;
 			com.complain("ERROR");
+			break;
 		}
 		default:
             std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;

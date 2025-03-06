@@ -6,6 +6,11 @@ int main()
 	int n = 4;
 
 	arr_zombie = zombieHorde( n, "Zimbo");
+	if(!arr_zombie)
+	{
+		std::cout << "Wrong N !" << std::endl;
+		return(1);
+	}
 	std::cout << "first one: " << arr_zombie->get_name() << std::endl;
 	for(int i = 0; i < n; i++)
 		std::cout << i+1 << " "
