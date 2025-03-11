@@ -7,23 +7,23 @@
 class ClapTrap
 {
     public:
+    
         ClapTrap();
-        ClapTrap(std::string const &name);
-        ClapTrap(ClapTrap const& obj);
-        ClapTrap& operator=(ClapTrap const& obj);
+        ClapTrap(const ClapTrap &obj);
+        ClapTrap &operator=(const ClapTrap &obj);
         ~ClapTrap();
 
-        void attack(const std::string& target);
+        void attack(const std::string &target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-
-        std::string const get_name() const;
+        
+        std::string get_name() const;
         int get_health() const;
         void set_health(int health);
         int get_energy_points() const;
-        void set_energy_points(int energy_points);
+        void set_energy_points(int energy);
         int get_attack_damage() const;
-        void set_attack_damage(int attack_damage);
+        void set_attack_damage(int damage);
 
     private:
         const std::string name;

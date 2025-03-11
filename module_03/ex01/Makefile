@@ -1,8 +1,8 @@
-NAME = claptrap
+NAME = serena
 CPP = g++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
-HEADER = ClapTrap.hpp
-SRC = main.cpp ClapTrap.cpp
+HEADER = ClapTrap.hpp ScavTrap.hpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 OBJS := $(SRC:.cpp=.o)
 
