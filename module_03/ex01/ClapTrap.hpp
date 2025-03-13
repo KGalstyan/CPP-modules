@@ -7,17 +7,17 @@
 class ClapTrap
 {
     public:
-    
         ClapTrap();
-        ClapTrap(const ClapTrap &obj);
+		ClapTrap(std::string const& _name);
+		ClapTrap(const ClapTrap &obj);
         ClapTrap &operator=(const ClapTrap &obj);
         ~ClapTrap();
 
         void attack(const std::string &target);
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
-        
-        std::string get_name() const;
+
+        std::string const get_name() const;
         int get_health() const;
         void set_health(int health);
         int get_energy_points() const;

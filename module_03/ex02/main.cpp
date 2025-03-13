@@ -1,26 +1,24 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-int main()
-{
-    ClapTrap clapTrap1;
-    ClapTrap clapTrap2("ClapTrap1");
+int main() {
+    FragTrap frag1("FragTrap1");
+    FragTrap frag2("FragTrap2");
 
-    clapTrap2.attack("Target1");
-    clapTrap2.takeDamage(5);
-    clapTrap2.beRepaired(10);
+    // Battle Simulation
+    frag1.attack(frag2.get_name());
+    frag2.takeDamage(frag1.get_attack_damage());
 
-    ClapTrap clapTrap3 = clapTrap2;
-    ClapTrap clapTrap4;
+    frag2.attack(frag1.get_name());
+    frag1.takeDamage(frag2.get_attack_damage());
 
-    clapTrap4 = clapTrap2;
+    frag1.attack(frag2.get_name());
+    frag2.takeDamage(frag1.get_attack_damage());
 
-    ScavTrap scavTrap1;
-    std::string name2 = "ScavTrap1";
-    ScavTrap scavTrap2(name2);
-
-    scavTrap2.attack("Target2");
-    scavTrap2.guardGate();
+    frag1.highFivesGuys();  // Call high-five
 
     return 0;
 }
+
+

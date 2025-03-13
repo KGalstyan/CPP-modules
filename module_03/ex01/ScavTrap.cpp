@@ -8,13 +8,28 @@ ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name)
     std::cout << "ScavTrap Parameter constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap("Unnamed ScavTrap")
 {
     set_health(100);
     set_energy_points(50);
     set_attack_damage(20);
     // set_name("Unnamed ScavTrap");
     std::cout << "ScavTrap Default constructor called" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& obj) : ClapTrap(obj)
+{
+	std::cout << "ScavTrap Copy constructor called" << std::endl;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap &obj)
+{
+	std::cout << "ScavTrap Copy assignment operator called" << std::endl;
+    if (this != &obj)
+    {
+		ClapTrap::operator=(obj);
+    }
+    return *this;
 }
 
 ScavTrap::~ScavTrap()

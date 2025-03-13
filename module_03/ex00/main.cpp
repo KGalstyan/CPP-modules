@@ -17,7 +17,7 @@ int main()
     ClapTrapOne.beRepaired(3);
     ClapTrapTwo.beRepaired(5);
 
-    ClapTrapOne.attack("ClapTrapTwo"); 
+    ClapTrapOne.attack("ClapTrapTwo");
 
     return 0;
 }

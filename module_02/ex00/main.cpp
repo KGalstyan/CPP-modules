@@ -1,11 +1,10 @@
 #include "Fixed.hpp"
 
-int main( void )
-{
-	Fixed a; // Def
-	Fixed b( a ); // Copy
-	Fixed c; // Def
-	c = b; // operator =
+int main( void ) {
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
+	c = b;
 	std::cout << a.getRawBits() << std::endl;
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;

@@ -6,13 +6,13 @@ ClapTrap::ClapTrap(std::string const& _name)
     std::cout << "Parameter constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap() 
+ClapTrap::ClapTrap()
     : name("Unnamed"), health(10), energy_points(10), attack_damage(0)
 {
     std::cout << "Default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap const& obj) 
+ClapTrap::ClapTrap(ClapTrap const& obj)
     : name(obj.name), health(obj.health), energy_points(obj.energy_points), attack_damage(obj.attack_damage)
 {
     std::cout << "Copy constructor called" << std::endl;
@@ -56,7 +56,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
-{   
+{
     if (get_energy_points() > 0)
     {
         set_energy_points(get_energy_points() - 1);

@@ -1,12 +1,10 @@
 NAME = claptrap
-CPP = g++
+CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 HEADER = ClapTrap.hpp
 SRC = main.cpp ClapTrap.cpp
 
 OBJS := $(SRC:.cpp=.o)
-
-RM = del /Q
 
 all: $(NAME)
 
@@ -14,10 +12,10 @@ $(NAME): $(OBJS) $(HEADER)
 	@$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	$(RM) $(OBJS)
+	rm -rf $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -rf $(NAME)
 
 re: fclean all
 
