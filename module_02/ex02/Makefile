@@ -1,4 +1,4 @@
-NAME = ./Fixedop
+NAME = Fixedop
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 HEADER = Fixed.hpp

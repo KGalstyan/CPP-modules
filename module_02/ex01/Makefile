@@ -1,4 +1,4 @@
-NAME = ./a.out
+NAME = Fixed2
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 HEADER = Fixed.hpp

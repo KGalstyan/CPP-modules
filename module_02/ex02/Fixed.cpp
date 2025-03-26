@@ -108,7 +108,6 @@ const Fixed Fixed::operator/(const Fixed &obj)
 	if(obj.fixed_point_number == 0)
 	{
 		std::cout << "You cannot divide a number by zero" << std::endl;
-		std::exit(1);
 	}
 	return Fixed((this->toFloat() / obj.toFloat()));
 }
