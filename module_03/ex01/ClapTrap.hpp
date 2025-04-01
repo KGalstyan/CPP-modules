@@ -25,7 +25,7 @@ class ClapTrap
         int get_attack_damage() const;
         void set_attack_damage(int damage);
 
-    private:
+    protected:
         const std::string name;
         int health;
         int energy_points;

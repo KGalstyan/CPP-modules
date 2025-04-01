@@ -1,8 +1,8 @@
 NAME = Animal
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98 #-fsanitize=address
-HEADER = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
+HEADER = Dog.hpp Animal.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp
+SRC = main.cpp Dog.cpp Animal.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp
 
 OBJS := $(SRC:.cpp=.o)
 
