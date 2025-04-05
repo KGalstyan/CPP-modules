@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name)
+ScavTrap::ScavTrap(std::string const &_name) : ClapTrap(_name)
 {
     set_health(100);
     set_energy_points(50);

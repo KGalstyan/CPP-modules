@@ -1,15 +1,17 @@
 NAME = repetitive
 CPP = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
-HEADER = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
-
-OBJS := $(SRC:.cpp=.o)
+HEADER = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(HEADER)
-	@$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CPP) $(CPPFLAGS) $(OBJS) -o $(NAME)
+
+%.o: %.cpp $(HEADER)
+	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJS)
@@ -20,3 +22,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+

@@ -13,7 +13,6 @@ ScavTrap::ScavTrap() : ClapTrap("Unnamed ScavTrap")
     set_health(100);
     set_energy_points(50);
     set_attack_damage(20);
-    // set_name("Unnamed ScavTrap");
     std::cout << "ScavTrap Default constructor called" << std::endl;
 }
 

@@ -2,36 +2,35 @@
 #include "Cat.hpp"
 #include "WrongCat.hpp"
 
-int main() {
-    // Basic test for constructor and destructor
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    delete j; // Should call Dog destructor and Brain destructor
-    delete i; // Should call Cat destructor and Brain destructor
+int main()
+{
+    const AAnimal* j = new Dog();
+    const AAnimal* i = new Cat();
+    delete j;
+    delete i;
 
-    std::cout << "\n--- Array of Animals Test ---\n";
+    std::cout << "\n--- Array of AAnimals Test ---\n";
 
-    // Create an array of Animals (half Dogs, half Cats)
     const int size = 6;
-    Animal* animals[size];
+    AAnimal* AAnimals[size];
 
     for (int index = 0; index < size / 2; ++index)
-        animals[index] = new Dog();
+        AAnimals[index] = new Dog();
     
     for (int index = size / 2; index < size; ++index)
-        animals[index] = new Cat();
+        AAnimals[index] = new Cat();
 
-    std::cout << "\n--- Deleting Animals ---\n";
+    std::cout << "\n--- Deleting AAnimals ---\n";
 
     for (int index = 0; index < size; ++index)
-        delete animals[index]; // Deleting as Animals should call proper destructors
+        delete AAnimals[index];
 
     std::cout << "\n--- Deep Copy Test ---\n";
 
     Dog originalDog;
     originalDog.getBrain()->setIdea(0, "I love bones!");
 
-    Dog copiedDog(originalDog); // Deep copy constructor should be called
+    Dog copiedDog(originalDog);
     std::cout << "Original Dog's Idea: " << originalDog.getBrain()->getIdea(0) << std::endl;
     std::cout << "Copied Dog's Idea: " << copiedDog.getBrain()->getIdea(0) << std::endl;
 
@@ -47,7 +46,7 @@ int main() {
     std::cout << "\n--- Assignment Operator Test ---\n";
 
     Dog anotherDog;
-    anotherDog = copiedDog; // Deep copy assignment operator should be called
+    anotherDog = copiedDog;
     std::cout << "Another Dog's Idea (after assignment): " << anotherDog.getBrain()->getIdea(0) << std::endl;
 
     return 0;

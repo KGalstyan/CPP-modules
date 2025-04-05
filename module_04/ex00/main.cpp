@@ -4,9 +4,9 @@
 
 // int main()
 // {
-//     const Animal* meta = new Animal();
-//     const Animal* j = new Dog();
-//     const Animal* i = new Cat();
+//     const AAnimal* meta = new AAnimal();
+//     const AAnimal* j = new Dog();
+//     const AAnimal* i = new Cat();
 //     std::cout << j->getType() << " " << std::endl;
 //     std::cout << i->getType() << " " << std::endl;
 //     i->makeSound(); //will output the cat sound!
@@ -20,9 +20,9 @@
 
 int AniMain()
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+    const AAnimal* meta = new AAnimal();
+    const AAnimal* j = new Dog();
+    const AAnimal* i = new Cat();
 
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
@@ -30,10 +30,10 @@ int AniMain()
     j->makeSound();
     meta->makeSound();
 
-    const WrongAnimal* wrongMeta = new WrongAnimal();
-    const WrongAnimal* wrongCat = new WrongCat();
+    const WrongAAnimal* wrongMeta = new WrongAAnimal();
+    const WrongAAnimal* wrongCat = new WrongCat();
 
-    std::cout << "Testing WrongAnimal and WrongCat:" << std::endl;
+    std::cout << "Testing WrongAAnimal and WrongCat:" << std::endl;
     wrongMeta->makeSound();
     wrongCat->makeSound();
 

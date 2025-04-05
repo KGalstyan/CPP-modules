@@ -1,17 +1,17 @@
 #include "WrongCat.hpp"
 
-WrongCat::WrongCat() : WrongAnimal("WrongCat")
+WrongCat::WrongCat() : WrongAAnimal("WrongCat")
 {
     std::cout << "WrongCat Constructor called" << std::endl;
 }
 
-WrongCat::WrongCat(std::string _type) : WrongAnimal("WrongCat")
+WrongCat::WrongCat(std::string _type) : WrongAAnimal("WrongCat")
 {
     (void)_type;
     std::cout << "WrongCat Parameter Constructor called" << std::endl;
 }
 
-WrongCat::WrongCat(const WrongCat &obj) : WrongAnimal(obj)
+WrongCat::WrongCat(const WrongCat &obj) : WrongAAnimal(obj)
 {
     std::cout << "WrongCat Copy Constructor called" << std::endl;
 }

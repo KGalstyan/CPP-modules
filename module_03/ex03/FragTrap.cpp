@@ -8,7 +8,7 @@ FragTrap::FragTrap() : ClapTrap("Unnamed FragTrap")
     std::cout << "FragTrap Default constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string const& name) : ClapTrap(name)
+FragTrap::FragTrap(std::string const& _name) : ClapTrap(_name)
 {
     set_health(100);
     set_energy_points(100);

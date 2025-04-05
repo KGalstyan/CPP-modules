@@ -2,11 +2,11 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 
-int main() {
+int main()
+{
     FragTrap frag1("FragTrap1");
     FragTrap frag2("FragTrap2");
 
-    // Battle Simulation
     frag1.attack(frag2.get_name());
     frag2.takeDamage(frag1.get_attack_damage());
 
@@ -16,7 +16,7 @@ int main() {
     frag1.attack(frag2.get_name());
     frag2.takeDamage(frag1.get_attack_damage());
 
-    frag1.highFivesGuys();  // Call high-five
+    frag1.highFivesGuys();
 
     return 0;
 }

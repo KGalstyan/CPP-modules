@@ -1,24 +1,24 @@
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal() : type("WrongAnimal")
+WrongAAnimal::WrongAAnimal() : type("WrongAAnimal")
 {
-    std::cout << "WrongAnimal Constructor called" << std::endl;
+    std::cout << "WrongAAnimal Constructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(std::string _type) : type(_type)
+WrongAAnimal::WrongAAnimal(std::string _type) : type(_type)
 {
-    std::cout << "WrongAnimal Parameter Constructor called" << std::endl;
+    std::cout << "WrongAAnimal Parameter Constructor called" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(const WrongAnimal &obj)
+WrongAAnimal::WrongAAnimal(const WrongAAnimal &obj)
 {
-    std::cout << "WrongAnimal Copy Constructor called" << std::endl;
+    std::cout << "WrongAAnimal Copy Constructor called" << std::endl;
     set_type(obj.type);
 }
 
-WrongAnimal& WrongAnimal::operator=(const WrongAnimal &obj)
+WrongAAnimal& WrongAAnimal::operator=(const WrongAAnimal &obj)
 {
-    std::cout << "WrongAnimal Copy Assignment Operator called" << std::endl;
+    std::cout << "WrongAAnimal Copy Assignment Operator called" << std::endl;
     if (this != &obj)
     {
         set_type(obj.type);
@@ -26,22 +26,22 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal &obj)
     return *this;
 }
 
-WrongAnimal::~WrongAnimal()
+WrongAAnimal::~WrongAAnimal()
 {
-    std::cout << "WrongAnimal Destructor called" << std::endl;
+    std::cout << "WrongAAnimal Destructor called" << std::endl;
 }
 
-std::string WrongAnimal::getType() const
+std::string WrongAAnimal::getType() const
 {
     return this->type;
 }
 
-void WrongAnimal::set_type(std::string _type)
+void WrongAAnimal::set_type(std::string _type)
 {
     this->type = _type;
 }
 
-void WrongAnimal::makeSound() const
+void WrongAAnimal::makeSound() const
 {
-    std::cout << "AAAAAAAAAAA I am wRongAnImal" << std::endl;
+    std::cout << "AAAAAAAAAAA I am wRongAAnimal" << std::endl;
 }

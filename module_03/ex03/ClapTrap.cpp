@@ -77,9 +77,9 @@ int ClapTrap::get_health() const
     return this->health;
 }
 
-void ClapTrap::set_health(int health)
+void ClapTrap::set_health(int _health)
 {
-    this->health = health;
+    this->health = _health;
 }
 
 int ClapTrap::get_energy_points() const
@@ -87,9 +87,9 @@ int ClapTrap::get_energy_points() const
     return this->energy_points;
 }
 
-void ClapTrap::set_energy_points(int energy_points)
+void ClapTrap::set_energy_points(int _energy_points)
 {
-    this->energy_points = energy_points;
+    this->energy_points = _energy_points;
 }
 
 int ClapTrap::get_attack_damage() const
@@ -97,7 +97,7 @@ int ClapTrap::get_attack_damage() const
     return this->attack_damage;
 }
 
-void ClapTrap::set_attack_damage(int attack_damage)
+void ClapTrap::set_attack_damage(int _attack_damage)
 {
-    this->attack_damage = attack_damage;
+    this->attack_damage = _attack_damage;
 }
