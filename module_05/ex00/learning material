@@ -1,0 +1,9 @@
+What does what() do?
+It's a virtual function from the base class std::exception. It returns a message (C-style string) describing the exception.
+
+When you override it in your custom exception class, it allows you to return a custom message when the exception is caught and someone calls e.what().
+
+
+Exceptions in C++ are used to handle errors or unexpected events that occur during program execution. Instead of crashing, your program can "throw" an exception and "catch" it somewhere else to handle the issue gracefully.
+
+g++ -> c++
