@@ -1,18 +1,18 @@
 #include "AMateria.hpp"
 
-AMateria::AMateria(std::string const &type) : _type(type)
+AMateria::AMateria(const std::string& _type) : type(_type)
 {
 }
 
-AMateria::AMateria() : _type("Default")
+AMateria::AMateria() : type("Default")
 {
 }
 
-AMateria::AMateria(AMateria &const obj) : _type(obj.type)
+AMateria::AMateria(const AMateria& obj) : type(obj.getType())
 {
 }
 
-AMateria& AMateria::operator=(AMateria& const obj)
+AMateria& AMateria::operator=(const AMateria& obj)
 {
     if(this != &obj)
     {
@@ -21,11 +21,16 @@ AMateria& AMateria::operator=(AMateria& const obj)
     return(*this);
 }
 
-~AMateria()
+AMateria::~AMateria()
 {
 }
 
 std::string const& AMateria::getType() const
 {
     return(this->type);
+}
+
+void AMateria::use(ICharacter &target)
+{
+	std::cout << "AMateria name is " << target.getName() << std::endl;
 }

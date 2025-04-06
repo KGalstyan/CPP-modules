@@ -1,10 +1,10 @@
-NAME = Interface
+NAME = inter
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 HEADER = AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp \
 			IMateriaSource.hpp MateriaSource.hpp
-SRC = AMateria.hpp Character.cpp Cure.cpp Ice.cpp ICharacter.cpp \
-			IMateriaSource.cpp MateriaSource.cpp main.cpp
+SRC = AMateria.cpp Character.cpp Cure.cpp Ice.cpp\
+			MateriaSource.cpp main.cpp
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
