@@ -1,5 +1,5 @@
 NAME = interface
-CPP = g++
+CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 HEADER = AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp \
 			IMateriaSource.hpp MateriaSource.hpp

@@ -1,5 +1,5 @@
 NAME = bureaucrat
-CPP = g++
+CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 SRC = main.cpp Bureaucrat.cpp Form.cpp
 HEADER = Bureaucrat.hpp Form.hpp

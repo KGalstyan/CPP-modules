@@ -17,7 +17,7 @@ class Form
     };
 
     private:
-        const name;
+        const std::string name;
         bool is_signed;
         const int gradeRequiredToSign;
         const int gradeRequiredToExecute;
@@ -25,10 +25,11 @@ class Form
         Form();
         Form();
         Form(Form& obj);
-        Form& operator=(FOrm& obj);
+        Form& operator=(Form& obj);
         ~Form();
-
-        beSigned(Bureaucrat& Bureau):
+        
+        const std::string get_name();
+        beSigned(Bureaucrat& Bureau);
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& b);
