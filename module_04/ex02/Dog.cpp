@@ -1,5 +1,4 @@
 #include "Dog.hpp"
-#include <cstdio>
 
 Dog::Dog() : AAnimal("Dog")
 {
@@ -7,7 +6,7 @@ Dog::Dog() : AAnimal("Dog")
     this->DogBrain = new Brain();
 }
 
-Dog::Dog(std::string _type) : AAnimal("Dog")
+Dog::Dog(const std::string& _type) : AAnimal("Dog")
 {
     (void)_type;
     std::cout << "Dog Parameter Constructor called" << std::endl;

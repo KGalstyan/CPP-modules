@@ -1,17 +1,17 @@
 #include "Cat.hpp"
 
-Cat::Cat() : AAnimal("Cat")
+Cat::Cat() : Animal("Cat")
 {
     std::cout << "Cat Constructor called" << std::endl;
 }
 
-Cat::Cat(std::string _type) : AAnimal("Cat")
+Cat::Cat(const std::string& _type) : Animal("Cat")
 {
     (void)_type;
     std::cout << "Cat Parameter Constructor called" << std::endl;
 }
 
-Cat::Cat(const Cat &obj) : AAnimal(obj)
+Cat::Cat(const Cat &obj) : Animal(obj)
 {
     std::cout << "Cat Copy Constructor called" << std::endl;
 }

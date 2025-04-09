@@ -4,26 +4,26 @@
 
 int main()
 {
-    const AAnimal* j = new Dog();
-    const AAnimal* i = new Cat();
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
     delete j;
     delete i;
 
-    std::cout << "\n--- Array of AAnimals Test ---\n";
+    std::cout << "\n--- Array of Animals Test ---\n";
 
     const int size = 6;
-    AAnimal* AAnimals[size];
+    Animal* Animals[size];
 
     for (int index = 0; index < size / 2; ++index)
-        AAnimals[index] = new Dog();
+        Animals[index] = new Dog();
     
     for (int index = size / 2; index < size; ++index)
-        AAnimals[index] = new Cat();
+        Animals[index] = new Cat();
 
-    std::cout << "\n--- Deleting AAnimals ---\n";
+    std::cout << "\n--- Deleting Animals ---\n";
 
     for (int index = 0; index < size; ++index)
-        delete AAnimals[index];
+        delete Animals[index];
 
     std::cout << "\n--- Deep Copy Test ---\n";
 

@@ -1,6 +1,6 @@
 NAME = AAnimal
 CPP = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 HEADER = Dog.hpp AAnimal.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp Brain.hpp
 SRC = main.cpp Dog.cpp AAnimal.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp
 OBJS := $(SRC:.cpp=.o)

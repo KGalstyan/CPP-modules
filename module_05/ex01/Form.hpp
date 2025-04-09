@@ -23,13 +23,18 @@ class Form
         const int gradeRequiredToExecute;
     public:
         Form();
-        Form();
+        Form(int _gradeRequiredToSign, int _gradeRequiredToExecute,std::string _name);
         Form(Form& obj);
         Form& operator=(Form& obj);
         ~Form();
         
-        const std::string get_name();
         beSigned(Bureaucrat& Bureau);
+        const std::string &getName(void) const;
+        bool getSign() const;
+        int getSignGrade() const;
+        int getExecuteGrade() const;
+        void beSigned(const Bureaucrat &);
+        
 };
 
 std::ostream& operator<<(std::ostream& os, const Form& b);

@@ -1,13 +1,13 @@
 #ifndef CAT_HPP
 #define CAT_HPP
 
-#include "AAnimal.hpp"
+#include "Animal.hpp"
 
-class Cat : public AAnimal
+class Cat : public Animal
 {
     public:
         Cat();
-        Cat(std::string _type);
+        Cat(const std::string& _type);
         Cat(const Cat& obj);
         Cat& operator=(const Cat& obj);
         ~Cat();

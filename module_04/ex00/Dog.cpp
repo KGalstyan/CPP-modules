@@ -1,17 +1,17 @@
 #include "Dog.hpp"
 
-Dog::Dog() : AAnimal("Dog")
+Dog::Dog() : Animal("Dog")
 {
     std::cout << "Dog Constructor called" << std::endl;
 }
 
-Dog::Dog(std::string _type) : AAnimal("Dog")
+Dog::Dog(const std::string& _type) : Animal("Dog")
 {
     (void)_type;
     std::cout << "Dog Parameter Constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog &obj) : AAnimal(obj)
+Dog::Dog(const Dog &obj) : Animal(obj)
 {
     std::cout << "Dog Copy Constructor called" << std::endl;
 }

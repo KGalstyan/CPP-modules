@@ -9,7 +9,7 @@ class AAnimal
         std::string type;
     public:
         AAnimal();
-        AAnimal(std::string _type);
+        AAnimal(const std::string& _type);
         AAnimal(const AAnimal &obj);
         AAnimal& operator=(const AAnimal& obj);
         std::string getType() const;

@@ -1,8 +1,8 @@
-NAME = AAnimal
+NAME = Brain
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
-HEADER = Dog.hpp AAnimal.hpp Cat.hpp WrongCat.hpp WrongAAnimal.hpp Brain.hpp
-SRC = main.cpp Dog.cpp AAnimal.cpp Cat.cpp WrongCat.cpp WrongAAnimal.cpp Brain.cpp
+HEADER = Dog.hpp Animal.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp Brain.hpp
+SRC = main.cpp Dog.cpp Animal.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp
 OBJS := $(SRC:.cpp=.o)
 
 all: $(NAME)

@@ -5,7 +5,7 @@ AAnimal::AAnimal() : type("AAnimal")
     std::cout << "AAnimal Constructor called" << std::endl;
 }
 
-AAnimal::AAnimal(std::string _type) : type(_type)
+AAnimal::AAnimal(const std::string& _type) : type(_type)
 {
     std::cout << "AAnimal Parameter Constructor called" << std::endl;
 }

@@ -6,7 +6,7 @@ Cat::Cat() : AAnimal("Cat")
     this->CatBrain = new Brain();
 }
 
-Cat::Cat(std::string _type) : AAnimal("Cat")
+Cat::Cat(const std::string& _type) : AAnimal("Cat")
 {
     (void)_type;
     std::cout << "Cat Parameter Constructor called" << std::endl;
