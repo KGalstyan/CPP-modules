@@ -25,7 +25,7 @@ class Form
         Form();
         Form(int _gradeRequiredToSign, int _gradeRequiredToExecute,std::string _name);
         Form(Form& obj);
-        Form& operator=(Form& obj);
+        const Form& operator=(const Form& obj);
         ~Form();
         
         beSigned(Bureaucrat& Bureau);
