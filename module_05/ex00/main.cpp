@@ -1,5 +1,6 @@
 #include "Bureaucrat.hpp"
-int main() {
+int main()
+{
     try {
         std::cout << "Test 1: Valid Bureaucrat" << std::endl;
         Bureaucrat b1("Alice", 10);

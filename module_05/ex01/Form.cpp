@@ -1,18 +1,18 @@
 #include "Form.hpp"
 
-Form::Form() : name("Unnamed") , is_signed(false) , gradeRequiredToExecute(150) , gradeRequiredToSign(150)
+Form::Form() : name("Unnamed") , is_signed(false) , gradeRequiredToSign(150) , gradeRequiredToExecute(150) 
 {
 }
 
-Form::Form(int _gradeRequiredToSign, int _gradeRequiredToExecute,std::string _name, bool is_signed) : name(_name) , gradeRequiredToExecute(_gradeRequiredToExecute) , gradeRequiredToSign(_gradeRequiredToSign) , is_signed(is_signed)
+Form::Form(int _gradeRequiredToSign, int _gradeRequiredToExecute,std::string _name, bool is_signed) : name(_name) , is_signed(is_signed) , gradeRequiredToSign(_gradeRequiredToSign) , gradeRequiredToExecute(_gradeRequiredToExecute)
 {
-	if (grade < 1)
+	if (_gradeRequiredToSign < 1 || _gradeRequiredToExecute < 1)
 		throw Form::GradeTooHighException();
-	else if (grade > 150)
+	else if (_gradeRequiredToSign > 150 || _gradeRequiredToExecute > 150)
 		throw Form::GradeTooLowException();
 }
 
-Form::Form(Form& obj) : name(obj.name) , gradeRequiredToExecute(obj.gradeRequiredToExecute) , gradeRequiredToSign(obj.gradeRequiredToSign) , is_signed(obj.s_signed)
+Form::Form(Form& obj) : name(obj.getName()) , is_signed(obj.getSign()) , gradeRequiredToSign(obj.getSignGrade()) , gradeRequiredToExecute(obj.getExecuteGrade())
 {
 }
 
@@ -21,10 +21,10 @@ const Form& Form::operator=(const Form& obj)
     std::cout << "Form copy assignment operator called" << std::endl;
 	if (&obj != this)
 	{
-		const_cast<std::string &>(this->name) = obj.name;
-		this->isSigned = obj.isSigned;
-		const_cast<int &>(this->signGrade) = obj.signGrade;
-		const_cast<int &>(this->executeGrade) = obj.executeGrade;
+		const_cast<std::string &>(this->name) = obj.getName();
+		this->is_signed = obj.getSign();
+		const_cast<int &>(this->gradeRequiredToSign) = obj.getSignGrade();
+		const_cast<int &>(this->gradeRequiredToExecute) = obj.getExecuteGrade();
 	}
 	return *this;
 }
@@ -55,9 +55,9 @@ int Form::getExecuteGrade() const
 
 void Form::beSigned(const Bureaucrat &obj)
 {
-	if (obj.getGrade() > this->signGrade)
+	if (obj.getGrade() > getSignGrade())
 		throw Form::GradeTooLowException();
-	this->isSigned = true;
+	this->is_signed = true;
 }
 
 const char *Form::GradeTooHighException::what() const throw()
