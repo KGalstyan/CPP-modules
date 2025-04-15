@@ -1,12 +1,12 @@
-NAME = bureaucrat28
+NAME = intern
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 SRC = main.cpp Bureaucrat.cpp ShrubberyCreationForm.cpp \
 	RobotomyRequestForm.cpp PresidentialPardonForm.cpp \
-	AForm.cpp
+	AForm.cpp Intern.cpp
 HEADER = Bureaucrat.hpp ShrubberyCreationForm.hpp \
 		RobotomyRequestForm.hpp PresidentialPardonForm.hpp \
-		AForm.hpp
+		AForm.hpp Intern.hpp
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)

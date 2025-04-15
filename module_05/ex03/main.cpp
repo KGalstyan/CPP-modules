@@ -1,97 +1,37 @@
-#include <iostream>
+#include "Intern.hpp"
 #include "Bureaucrat.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
 
 int main()
 {
-	{
-		std::cout << std::endl;
-		std::cout << "\033[35m***********************************************\033[0m" << std::endl;
-		std::cout << std::endl;
-		try
-		{
-			ShrubberyCreationForm form("Tree");
-			Bureaucrat Bot("Bot", 35);
+    Intern intern;
+    Bureaucrat boss("Big Boss", 1);
 
-			form.beSigned(Bot);
-			form.execute(Bot);
-			std::cout << "Form executed successfully" << std::endl;
-		}
-		catch (const std::exception &e)
-		{
-			std::cerr << e.what() << '\n';
-		}
-		std::cout << std::endl;
-		std::cout << "\033[35m***********************************************\033[0m" << std::endl;
-		std::cout << std::endl;
-	}
+    AForm* shrub = intern.makeForm("shrubbery creation", "Garden");
+    AForm* robo = intern.makeForm("robotomy request", "Bender");
+    AForm* pardon = intern.makeForm("presidential pardon", "Rick");
+    AForm* fail = intern.makeForm("coffee request", "Intern");
 
-	{
-		std::cout << std::endl;
-		std::cout << "\033[35m***********************************************\033[0m" << std::endl;
-		std::cout << std::endl;
-		try
-		{
-			RobotomyRequestForm form("Robo");
-			Bureaucrat Bot("Bot", 35);
+    if (shrub) {
+        boss.signForm(*shrub);
+        boss.executeForm(*shrub);
+        delete shrub;
+    }
 
-			form.beSigned(Bot);
-			form.execute(Bot);
-			std::cout << "Form executed successfully" << std::endl;
-		}
-		catch (const std::exception &e)
-		{
-			std::cerr << e.what() << '\n';
-		}
-		std::cout << std::endl;
-		std::cout << "\033[35m***********************************************\033[0m" << std::endl;
-		std::cout << std::endl;
-	}
+    if (robo) {
+        boss.signForm(*robo);
+        boss.executeForm(*robo);
+        delete robo;
+    }
 
-	{
-		std::cout << std::endl;
-		std::cout << "\033[35m***********************************************\033[0m" << std::endl;
-		std::cout << std::endl;
-		try
-		{
-			RobotomyRequestForm form("Robo");
-			Bureaucrat Bot("Bot", 34);
+    if (pardon) {
+        boss.signForm(*pardon);
+        boss.executeForm(*pardon);
+        delete pardon;
+    }
 
-			form.beSigned(Bot);
-			form.execute(Bot);
-			std::cout << "Form executed successfully" << std::endl;
-		}
-		catch (const std::exception &e)
-		{
-			std::cerr << e.what() << '\n';
-		}
-		std::cout << std::endl;
-		std::cout << "\033[35m***********************************************\033[0m" << std::endl;
-		std::cout << std::endl;
-	}
+    if (fail == NULL) {
+        std::cout << "Failed to create unknown form correctly." << std::endl;
+    }
 
-	{
-		std::cout << std::endl;
-		std::cout << "\033[35m***********************************************\033[0m" << std::endl;
-		std::cout << std::endl;
-		try
-		{
-			PresidentialPardonForm form("Franck");
-			Bureaucrat Bot("Bot", 4);
-
-			form.beSigned(Bot);
-			std::cout << form << std::endl;
-			form.execute(Bot);
-		}
-		catch (const std::exception &e)
-		{
-			std::cerr << e.what() << '\n';
-		}
-		std::cout << std::endl;
-		std::cout << "\033[35m***********************************************\033[0m" << std::endl;
-		std::cout << std::endl;
-	}
-	return 0;
+    return 0;
 }
