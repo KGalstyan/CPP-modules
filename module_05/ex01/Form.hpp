@@ -30,7 +30,7 @@ class Form
         const Form& operator=(const Form& obj);
         ~Form();
         
-        beSigned(Bureaucrat& Bureau);
+        void beSigned(Bureaucrat& Bureau);
         const std::string& getName(void) const;
         bool getSign() const;
         int getSignGrade() const;
