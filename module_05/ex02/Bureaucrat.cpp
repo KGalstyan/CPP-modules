@@ -52,14 +52,20 @@ int Bureaucrat::getGrade() const
 
 void Bureaucrat::incrementGrade()
 {
-    if(this->grade > 1)
-        this->grade--;
+    this->grade--;
+    if (this->grade < 1)
+		throw Bureaucrat::GradeTooHighException();
+	else if (this->grade > 150)
+		throw Bureaucrat::GradeTooLowException();
 }
 
 void Bureaucrat::decrementGrade()
 {
-    if(this->grade < 150)
-        this->grade++;
+    this->grade++;
+    if (this->grade < 1)
+		throw Bureaucrat::GradeTooHighException();
+	else if (this->grade > 150)
+		throw Bureaucrat::GradeTooLowException();
 }
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b)
@@ -74,15 +80,15 @@ void Bureaucrat::signForm(AForm &obj) const
     {
         if (obj.getSign())
         {
-            std::cout<<this->getName()<<" coudn't sign "<<obj.getName()<<" because the form is already signed!"<<std::endl;
+            std::cout<<this->getName() << " coudn't sign " << obj.getName() << " because the form is already signed!" << std::endl;
             return ;
         }
         obj.beSigned(*this);
-        std::cout<<this->getName()<<" signed "<<obj.getName()<<std::endl;
+        std::cout << this->getName() << " signed " << obj.getName() << std::endl;
     }
     catch(std::exception& e)    
     {
-        std::cout<<this->getName()<<" coudn't sign "<<obj.getName()<<" because "<< e.what()<<std::endl;
+        std::cout<<this->getName() << " coudn't sign "<<obj.getName()<<" because "<< e.what() << std::endl;
     }
 }
 

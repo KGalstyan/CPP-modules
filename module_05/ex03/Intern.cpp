@@ -2,7 +2,7 @@
 
 const char * Intern::NoSuchFormType::what() const throw()
 {
-    return "No such form type!\n";
+    return ("No such form type!\n");
 }
 
 Intern::Intern()
@@ -45,16 +45,22 @@ AForm* Intern::makeForm(const std::string& name, const std::string& target)
 		i++;
 
 	std::cout << "Intern ";
-	if (i == 3) {
+	if (i == 3)
+	{
 		std::cout << "couldn't find the form: " << name << std::endl;
 		throw Intern::NoSuchFormType();
 	}
 
 	std::cout << "creates " << name << std::endl;
 
-	if (i == 0)
-		return new ShrubberyCreationForm(target);
-	else if (i == 1)
-		return new RobotomyRequestForm(target);
-	return new PresidentialPardonForm(target);
+	switch(i)
+	{
+		case 0:
+			return (new ShrubberyCreationForm(target));
+		case 1:
+			return (new RobotomyRequestForm(target));
+		case 2:
+			return (new PresidentialPardonForm(target));
+	}
+	return NULL;
 }
