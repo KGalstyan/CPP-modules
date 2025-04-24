@@ -60,6 +60,7 @@ void identify(Base& p)
 
 int main()
 {
+    std::srand(std::time(0));
     Base* obj = generate();
 
     std::cout << "Identify using pointer: ";
