@@ -1,8 +1,8 @@
-NAME = whatever
+NAME = mutant
 CPP = g++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
 SRC = main.cpp
-HEADER = whatever.hpp
+HEADER = MutantStack.hpp
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
