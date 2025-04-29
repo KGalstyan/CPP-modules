@@ -12,8 +12,6 @@ Array<T>::Array(unsigned int _n) : n(_n)
     arr = new T[_n];
 }
 
-/////////////  copy constructor and assignment operator ////
-
 template <typename T>
 Array<T>::Array(const Array& obj) : arr(NULL), n(obj.n)
 {
