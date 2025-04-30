@@ -1,8 +1,8 @@
-NAME = span
+NAME = RPN
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-fsanitize=address
-SRC = main.cpp Span.cpp
-HEADER = Span.hpp
+SRC = main.cpp RPN.cpp
+HEADER = RPN.hpp
 OBJS = $(SRC:.cpp=.o)
 
 all: $(NAME)
