@@ -20,6 +20,7 @@ class BitcoinExchange
         void addToDatabase(const std::string& date, const std::string& exStr);
         void processInput(const std::string& inputFile);
         void handleLine(const std::string& line);
+        bool isValidDate(const std::string& date);
         bool isValidValue(const std::string& valueStr, float& value);
         std::map<std::string, double>::iterator findClosestDate(const std::string& date);
 

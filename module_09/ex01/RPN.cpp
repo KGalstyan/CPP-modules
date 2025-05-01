@@ -1,10 +1,5 @@
 #include "RPN.hpp"
 
-#include <sstream>
-#include <iostream>
-#include <cstdlib>
-#include <stdexcept>
-
 RPN::RPN()
 {
 }
@@ -64,8 +59,10 @@ int RPN::evaluate(const std::string& expression)
         {
 			if (_stack.size() < 2)
 				throw std::runtime_error("Not enough operands");
-			int b = _stack.top(); _stack.pop();
-			int a = _stack.top(); _stack.pop();
+			int b = _stack.top();
+			_stack.pop();
+			int a = _stack.top();
+			_stack.pop();
 			int result = applyOperator(a, b, token);
 			_stack.push(result);
 		}
