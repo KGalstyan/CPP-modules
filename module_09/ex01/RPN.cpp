@@ -36,9 +36,12 @@ bool RPN::isNumber(const std::string& token) const
 
 int RPN::applyOperator(int a, int b, const std::string& op) const
 {
-	if (op == "+") return a + b;
-	if (op == "-") return a - b;
-	if (op == "*") return a * b;
+	if (op == "+")
+		return a + b;
+	if (op == "-")
+		return a - b;
+	if (op == "*")
+		return a * b;
 	if (op == "/")
     {
 		if (b == 0)
